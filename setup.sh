@@ -1,5 +1,5 @@
-minikube delete
-minikube start --vm-driver=virtualbox
+# minikube delete
+# minikube start --vm-driver=virtualbox
 
 eval $(minikube docker-env)
 #eval $(minikube -p minikube docker-env)
