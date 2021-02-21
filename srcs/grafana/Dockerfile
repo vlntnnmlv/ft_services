@@ -6,7 +6,7 @@
 #    By: rmarguri <rmarguri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/12 14:04:36 by rmarguri          #+#    #+#              #
-#    Updated: 2021/02/10 19:45:12 by rmarguri         ###   ########.fr        #
+#    Updated: 2021/02/21 17:20:55 by rmarguri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,10 @@ ADD     https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.0.
 RUN     tar -C . -xzf grafana-5.0.4.linux-x64.tar.gz && \
         mv grafana-5.0.4 /usr/share/grafana
 
-RUN    apk --no-cache add ca-certificates wget
-       wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
-       wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk
-       apk add glibc-2.28-r0.apk
+RUN    apk --no-cache add ca-certificates wget \
+       && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
+       && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk \
+       && apk add glibc-2.28-r0.apk && rm -rf grafana-5.0.4.linux-x64.tar.gz
 
 COPY    srcs/start.sh /
 
@@ -40,3 +40,4 @@ COPY    srcs/dashboards/. /var/lib/grafana_dashboards/
 EXPOSE  3000
 
 CMD     ["sh",  "start.sh"]
+# CMD     ["sh"]
