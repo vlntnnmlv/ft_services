@@ -3,7 +3,9 @@ datasources:
 - name: influxDB
   type: influxdb
   url: http://influxdb:8086
-  password: 1
+  access: proxy
+  isDefault: true
   user: telegraf
+  password: metricsmetricsmetricsmetrics  
   database: telegraf
   editable: false
