@@ -6,7 +6,7 @@
 #    By: rmarguri <rmarguri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/12 14:04:40 by rmarguri          #+#    #+#              #
-#    Updated: 2021/03/02 19:10:52 by rmarguri         ###   ########.fr        #
+#    Updated: 2021/03/06 18:22:53 by rmarguri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ RUN 	apk update && \
 		apk add openrc
 
 RUN		apk add influxdb
-
+	
 EXPOSE  8086
 
 CMD     [ "influxd" ]

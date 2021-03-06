@@ -6,7 +6,7 @@
 #    By: rmarguri <rmarguri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/12 14:04:36 by rmarguri          #+#    #+#              #
-#    Updated: 2021/03/02 19:00:13 by rmarguri         ###   ########.fr        #
+#    Updated: 2021/03/06 19:10:23 by rmarguri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,3 @@ COPY    srcs/dashboards/. /var/lib/grafana_dashboards/
 EXPOSE  3000
 
 CMD     ["sh", "start.sh"]
-# CMD     ["sh"]

@@ -6,6 +6,6 @@ datasources:
   access: proxy
   isDefault: true
   user: telegraf
-  password: metricsmetricsmetricsmetrics  
+  password: metricsmetricsmetricsmetrics
   database: telegraf
   editable: false

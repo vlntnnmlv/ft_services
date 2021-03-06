@@ -16,3 +16,5 @@ data:
       log-enabled=true
     [[graphite]]
       database="telegraf"
+      user="telegraf"
+      password="metricsmetricsmetricsmetrics"
